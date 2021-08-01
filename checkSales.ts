@@ -25,7 +25,7 @@ const buildMessage = (sale: any) => (
 	.setColor('#0099ff')
 	.setTitle(sale.asset.name + ' sold!')
 	.setURL(sale.asset.permalink)
-	.setAuthor('OpenSea Bot', 'https://files.readme.io/566c72b-opensea-logomark-full-colored.png', 'https://github.com/sbauch/opensea-discord-bot')
+	.setAuthor('Treeverse-bot')
 	.setThumbnail(sale.asset.collection.image_url)
 	.addFields(
 		{ name: 'Name', value: sale.asset.name },
@@ -33,7 +33,7 @@ const buildMessage = (sale: any) => (
 		{ name: 'Buyer', value: sale?.winner_account?.address, },
 		{ name: 'Seller', value: sale?.seller?.address,  },
 	)
-  .setImage(sale.asset.image_url)
+  
 	.setTimestamp(Date.parse(`${sale?.created_date}Z`))
 	.setFooter('Sold on OpenSea', 'https://files.readme.io/566c72b-opensea-logomark-full-colored.png')
 )
